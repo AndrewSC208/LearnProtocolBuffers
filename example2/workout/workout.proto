@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package workout;
+
+service Workout {
+    // Creates a workout and returns 
+    rpc CreateWorkout (WorkoutRequest) returns (Item) {}
+
+    // GetWorkout, get a workout by id
+    rpc ReadWorkout (ItemRequest) returns (Item) {}
+}
+
+message Item {
+    int32 id = 1;
+    WorkoutRequest workout = 2;
+}
+
+message Entry {
+    string name = 1;
+    int64 date = 2;
+    string description = 3;
+    string entry = 4;
+    enum Corpus {
+        GENERAL = 0;
+        IDEA = 1;
+        THOUGHT = 2;
+        WORKOUT = 3;
+        BUSINESS = 4;
+        REMINDER = 5;
+    }
+    Corpus corpus = 5;
+}
+
+message WorkoutRequest {
+    string title = 1;
+    string type = 2;
+    int64 startDateTime = 3;
+    int64 duration = 4;
+}
+
+message ItemRequest {
+    int32 id = 1;
+}
