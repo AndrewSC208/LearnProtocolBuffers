@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	pb "github.com/AndrewSC208/GoByExample/ProtocolBuffers/example2/workout"
+	pb "github.com/AndrewSC208/LearnProtocolBuffers/example2/workout"
 	"google.golang.org/grpc"
 )
 

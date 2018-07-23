@@ -8,7 +8,7 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	pb "github.com/AndrewSC208/GoByExample/ProtocolBuffers/example1/helloworld"
+	pb "github.com/AndrewSC208/LearnProtocolBuffers/example1/helloworld"
 )
 
 const (
